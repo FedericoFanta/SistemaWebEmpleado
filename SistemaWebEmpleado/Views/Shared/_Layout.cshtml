@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/site.css"> @*Agrego ~ para que busque desde la raiz (alt 126) *@
+</head>
+<body>
+    <div class="header">
+        <div class="caja1">
+          <h1>Sistema Empleado</h1>
+        </div>
+        <div class="caja2"></div>
+
+    </div>
+    <div id="contentMain">
+        <div class="contentMainCaja1">
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+            }
+            else
+            {
+                <h2>Administración de empleados</h2>
+            }
+        </div>
+        <div class="contentMainCaja2">
+            <div class="menu">
+            <a href="#link1"> Home </a>
+            <a href="#link1"> Empleados </a>
+            </div>
+            <div id="contentMainCaja2_5">
+               
+                
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+           
+            <div id="contentMainCaja2_6">
+                <h2>Infoempleado@gmail.com</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

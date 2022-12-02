@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Bienvenidos al Sitio Web</h1>
+<h1>@ViewBag.Fecha</h1>
+<p>
+    @Html.ActionLink("Ir a Empleados", "Index", "Empleado")
+</p>
+
+@section SideBar{
+
+        <h2>Bienvenido a Web Empleados</h2>
+    }
